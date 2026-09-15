@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# Run logs
+*.log
+
 # Virtual environments
 LLM_Venv/
 .venv/
