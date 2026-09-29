@@ -1,0 +1,4590 @@
+{
+  "embed_model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "embed_ok": true,
+  "n_questions": 20,
+  "n_builtin": 15,
+  "n_custom": 5,
+  "eval_k5": {
+    "Vector RAG": {
+      "fact": {
+        "recall": 1.0,
+        "mrr": 1.0,
+        "full": 6,
+        "total": 6,
+        "per_q": [
+          {
+            "qid": "Q06",
+            "retrieved": [
+              "doc01",
+              "doc15",
+              "doc06",
+              "doc07",
+              "doc04"
+            ],
+            "evidence": [
+              "doc01"
+            ],
+            "hit": [
+              "doc01"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q07",
+            "retrieved": [
+              "doc09",
+              "doc01",
+              "doc15",
+              "doc08",
+              "doc11"
+            ],
+            "evidence": [
+              "doc09"
+            ],
+            "hit": [
+              "doc09"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q08",
+            "retrieved": [
+              "doc13",
+              "doc12",
+              "doc05",
+              "doc06",
+              "doc11"
+            ],
+            "evidence": [
+              "doc13"
+            ],
+            "hit": [
+              "doc13"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q09",
+            "retrieved": [
+              "doc02",
+              "doc07",
+              "doc10",
+              "doc04",
+              "doc11"
+            ],
+            "evidence": [
+              "doc02"
+            ],
+            "hit": [
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q10",
+            "retrieved": [
+              "doc12",
+              "doc06",
+              "doc07",
+              "doc08",
+              "doc11"
+            ],
+            "evidence": [
+              "doc12"
+            ],
+            "hit": [
+              "doc12"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q16",
+            "retrieved": [
+              "doc03",
+              "doc05",
+              "doc10",
+              "doc02",
+              "doc04"
+            ],
+            "evidence": [
+              "doc03"
+            ],
+            "hit": [
+              "doc03"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          }
+        ]
+      },
+      "multi": {
+        "recall": 0.8809523809523808,
+        "mrr": 0.9285714285714286,
+        "full": 5,
+        "total": 7,
+        "per_q": [
+          {
+            "qid": "Q01",
+            "retrieved": [
+              "doc04",
+              "doc06",
+              "doc05",
+              "doc11",
+              "doc07"
+            ],
+            "evidence": [
+              "doc04",
+              "doc06",
+              "doc02"
+            ],
+            "hit": [
+              "doc04",
+              "doc06"
+            ],
+            "rank": 1,
+            "recall": 0.6666666666666666
+          },
+          {
+            "qid": "Q02",
+            "retrieved": [
+              "doc07",
+              "doc06",
+              "doc04",
+              "doc11",
+              "doc15"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04",
+              "doc06"
+            ],
+            "hit": [
+              "doc04",
+              "doc06",
+              "doc11"
+            ],
+            "rank": 2,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q03",
+            "retrieved": [
+              "doc10",
+              "doc02",
+              "doc01",
+              "doc04",
+              "doc03"
+            ],
+            "evidence": [
+              "doc10",
+              "doc02"
+            ],
+            "hit": [
+              "doc10",
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q04",
+            "retrieved": [
+              "doc04",
+              "doc07",
+              "doc06",
+              "doc05",
+              "doc08"
+            ],
+            "evidence": [
+              "doc07",
+              "doc04"
+            ],
+            "hit": [
+              "doc04",
+              "doc07"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q05",
+            "retrieved": [
+              "doc11",
+              "doc04",
+              "doc02",
+              "doc07",
+              "doc05"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04"
+            ],
+            "hit": [
+              "doc04",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q17",
+            "retrieved": [
+              "doc11",
+              "doc04",
+              "doc02",
+              "doc05",
+              "doc10"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04",
+              "doc02"
+            ],
+            "hit": [
+              "doc02",
+              "doc04",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q19",
+            "retrieved": [
+              "doc10",
+              "doc05",
+              "doc01",
+              "doc04",
+              "doc15"
+            ],
+            "evidence": [
+              "doc10",
+              "doc03"
+            ],
+            "hit": [
+              "doc10"
+            ],
+            "rank": 1,
+            "recall": 0.5
+          }
+        ]
+      },
+      "global": {
+        "recall": 0.9523809523809523,
+        "mrr": 0.8333333333333333,
+        "full": 6,
+        "total": 7,
+        "per_q": [
+          {
+            "qid": "Q11",
+            "retrieved": [
+              "doc10",
+              "doc05",
+              "doc15",
+              "doc01",
+              "doc03"
+            ],
+            "evidence": [
+              "doc10",
+              "doc02",
+              "doc03"
+            ],
+            "hit": [
+              "doc10",
+              "doc03"
+            ],
+            "rank": 1,
+            "recall": 0.6666666666666666
+          },
+          {
+            "qid": "Q12",
+            "retrieved": [
+              "doc15",
+              "doc09",
+              "doc06",
+              "doc11",
+              "doc08"
+            ],
+            "evidence": [
+              "doc09"
+            ],
+            "hit": [
+              "doc09"
+            ],
+            "rank": 2,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q13",
+            "retrieved": [
+              "doc04",
+              "doc07",
+              "doc02",
+              "doc10",
+              "doc11"
+            ],
+            "evidence": [
+              "doc04"
+            ],
+            "hit": [
+              "doc04"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q14",
+            "retrieved": [
+              "doc08",
+              "doc06",
+              "doc05",
+              "doc15",
+              "doc07"
+            ],
+            "evidence": [
+              "doc08"
+            ],
+            "hit": [
+              "doc08"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q15",
+            "retrieved": [
+              "doc06",
+              "doc04",
+              "doc08",
+              "doc07",
+              "doc11"
+            ],
+            "evidence": [
+              "doc06",
+              "doc11"
+            ],
+            "hit": [
+              "doc06",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q18",
+            "retrieved": [
+              "doc15",
+              "doc01",
+              "doc11",
+              "doc05",
+              "doc06"
+            ],
+            "evidence": [
+              "doc11"
+            ],
+            "hit": [
+              "doc11"
+            ],
+            "rank": 3,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q20",
+            "retrieved": [
+              "doc15",
+              "doc11",
+              "doc06",
+              "doc01",
+              "doc10"
+            ],
+            "evidence": [
+              "doc15"
+            ],
+            "hit": [
+              "doc15"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          }
+        ]
+      }
+    },
+    "GraphRAG": {
+      "fact": {
+        "recall": 1.0,
+        "mrr": 1.0,
+        "full": 6,
+        "total": 6,
+        "per_q": [
+          {
+            "qid": "Q06",
+            "retrieved": [
+              "doc01"
+            ],
+            "evidence": [
+              "doc01"
+            ],
+            "hit": [
+              "doc01"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q07",
+            "retrieved": [
+              "doc09"
+            ],
+            "evidence": [
+              "doc09"
+            ],
+            "hit": [
+              "doc09"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q08",
+            "retrieved": [
+              "doc13"
+            ],
+            "evidence": [
+              "doc13"
+            ],
+            "hit": [
+              "doc13"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q09",
+            "retrieved": [
+              "doc02",
+              "doc04",
+              "doc11",
+              "doc10",
+              "doc06"
+            ],
+            "evidence": [
+              "doc02"
+            ],
+            "hit": [
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q10",
+            "retrieved": [
+              "doc12",
+              "doc06",
+              "doc04",
+              "doc11"
+            ],
+            "evidence": [
+              "doc12"
+            ],
+            "hit": [
+              "doc12"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q16",
+            "retrieved": [
+              "doc03",
+              "doc05",
+              "doc10"
+            ],
+            "evidence": [
+              "doc03"
+            ],
+            "hit": [
+              "doc03"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          }
+        ]
+      },
+      "multi": {
+        "recall": 1.0,
+        "mrr": 0.9285714285714286,
+        "full": 7,
+        "total": 7,
+        "per_q": [
+          {
+            "qid": "Q01",
+            "retrieved": [
+              "doc06",
+              "doc11",
+              "doc02",
+              "doc04",
+              "doc10"
+            ],
+            "evidence": [
+              "doc04",
+              "doc06",
+              "doc02"
+            ],
+            "hit": [
+              "doc04",
+              "doc06",
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q02",
+            "retrieved": [
+              "doc11",
+              "doc06",
+              "doc02",
+              "doc04",
+              "doc10"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04",
+              "doc06"
+            ],
+            "hit": [
+              "doc04",
+              "doc06",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q03",
+            "retrieved": [
+              "doc10",
+              "doc02",
+              "doc04",
+              "doc11",
+              "doc06"
+            ],
+            "evidence": [
+              "doc10",
+              "doc02"
+            ],
+            "hit": [
+              "doc10",
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q04",
+            "retrieved": [
+              "doc08",
+              "doc07",
+              "doc04",
+              "doc02",
+              "doc10"
+            ],
+            "evidence": [
+              "doc07",
+              "doc04"
+            ],
+            "hit": [
+              "doc04",
+              "doc07"
+            ],
+            "rank": 2,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q05",
+            "retrieved": [
+              "doc11",
+              "doc02",
+              "doc04",
+              "doc10"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04"
+            ],
+            "hit": [
+              "doc04",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q17",
+            "retrieved": [
+              "doc11",
+              "doc02",
+              "doc04",
+              "doc10"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04",
+              "doc02"
+            ],
+            "hit": [
+              "doc02",
+              "doc04",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q19",
+            "retrieved": [
+              "doc10",
+              "doc03",
+              "doc05"
+            ],
+            "evidence": [
+              "doc10",
+              "doc03"
+            ],
+            "hit": [
+              "doc10",
+              "doc03"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          }
+        ]
+      },
+      "global": {
+        "recall": 0.6428571428571429,
+        "mrr": 0.33809523809523806,
+        "full": 4,
+        "total": 7,
+        "per_q": [
+          {
+            "qid": "Q11",
+            "retrieved": [
+              "doc01"
+            ],
+            "evidence": [
+              "doc10",
+              "doc02",
+              "doc03"
+            ],
+            "hit": [],
+            "rank": 0,
+            "recall": 0.0
+          },
+          {
+            "qid": "Q12",
+            "retrieved": [
+              "doc09",
+              "doc11",
+              "doc13",
+              "doc02",
+              "doc04"
+            ],
+            "evidence": [
+              "doc09"
+            ],
+            "hit": [
+              "doc09"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q13",
+            "retrieved": [
+              "doc11",
+              "doc02",
+              "doc04",
+              "doc10",
+              "doc06"
+            ],
+            "evidence": [
+              "doc04"
+            ],
+            "hit": [
+              "doc04"
+            ],
+            "rank": 3,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q14",
+            "retrieved": [
+              "doc02",
+              "doc04",
+              "doc06",
+              "doc07",
+              "doc08"
+            ],
+            "evidence": [
+              "doc08"
+            ],
+            "hit": [
+              "doc08"
+            ],
+            "rank": 5,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q15",
+            "retrieved": [
+              "doc02",
+              "doc04",
+              "doc06",
+              "doc07",
+              "doc08"
+            ],
+            "evidence": [
+              "doc06",
+              "doc11"
+            ],
+            "hit": [
+              "doc06"
+            ],
+            "rank": 3,
+            "recall": 0.5
+          },
+          {
+            "qid": "Q18",
+            "retrieved": [
+              "doc09",
+              "doc11",
+              "doc13",
+              "doc02",
+              "doc03"
+            ],
+            "evidence": [
+              "doc11"
+            ],
+            "hit": [
+              "doc11"
+            ],
+            "rank": 2,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q20",
+            "retrieved": [
+              "doc09",
+              "doc11",
+              "doc13",
+              "doc02",
+              "doc03"
+            ],
+            "evidence": [
+              "doc15"
+            ],
+            "hit": [],
+            "rank": 0,
+            "recall": 0.0
+          }
+        ]
+      }
+    },
+    "WikiRAG": {
+      "fact": {
+        "recall": 1.0,
+        "mrr": 0.8333333333333334,
+        "full": 6,
+        "total": 6,
+        "per_q": [
+          {
+            "qid": "Q06",
+            "retrieved": [
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc06",
+              "doc02"
+            ],
+            "evidence": [
+              "doc01"
+            ],
+            "hit": [
+              "doc01"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q07",
+            "retrieved": [
+              "doc09",
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc02"
+            ],
+            "evidence": [
+              "doc09"
+            ],
+            "hit": [
+              "doc09"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q08",
+            "retrieved": [
+              "doc11",
+              "doc13",
+              "doc01",
+              "doc12",
+              "doc14"
+            ],
+            "evidence": [
+              "doc13"
+            ],
+            "hit": [
+              "doc13"
+            ],
+            "rank": 2,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q09",
+            "retrieved": [
+              "doc02",
+              "doc10",
+              "doc15",
+              "doc06",
+              "doc07"
+            ],
+            "evidence": [
+              "doc02"
+            ],
+            "hit": [
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q10",
+            "retrieved": [
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc06",
+              "doc02"
+            ],
+            "evidence": [
+              "doc12"
+            ],
+            "hit": [
+              "doc12"
+            ],
+            "rank": 2,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q16",
+            "retrieved": [
+              "doc03",
+              "doc10",
+              "doc05",
+              "doc02",
+              "doc15"
+            ],
+            "evidence": [
+              "doc03"
+            ],
+            "hit": [
+              "doc03"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          }
+        ]
+      },
+      "multi": {
+        "recall": 0.8809523809523808,
+        "mrr": 0.8857142857142858,
+        "full": 5,
+        "total": 7,
+        "per_q": [
+          {
+            "qid": "Q01",
+            "retrieved": [
+              "doc04",
+              "doc11",
+              "doc06",
+              "doc07",
+              "doc08"
+            ],
+            "evidence": [
+              "doc04",
+              "doc06",
+              "doc02"
+            ],
+            "hit": [
+              "doc04",
+              "doc06"
+            ],
+            "rank": 1,
+            "recall": 0.6666666666666666
+          },
+          {
+            "qid": "Q02",
+            "retrieved": [
+              "doc06",
+              "doc07",
+              "doc08",
+              "doc04",
+              "doc11"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04",
+              "doc06"
+            ],
+            "hit": [
+              "doc04",
+              "doc06",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q03",
+            "retrieved": [
+              "doc02",
+              "doc10",
+              "doc15",
+              "doc01",
+              "doc12"
+            ],
+            "evidence": [
+              "doc10",
+              "doc02"
+            ],
+            "hit": [
+              "doc10",
+              "doc02"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q04",
+            "retrieved": [
+              "doc04",
+              "doc11",
+              "doc07",
+              "doc08",
+              "doc06"
+            ],
+            "evidence": [
+              "doc07",
+              "doc04"
+            ],
+            "hit": [
+              "doc04",
+              "doc07"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q05",
+            "retrieved": [
+              "doc04",
+              "doc11",
+              "doc13",
+              "doc06"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04"
+            ],
+            "hit": [
+              "doc04",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q17",
+            "retrieved": [
+              "doc04",
+              "doc11",
+              "doc13",
+              "doc02",
+              "doc10"
+            ],
+            "evidence": [
+              "doc11",
+              "doc04",
+              "doc02"
+            ],
+            "hit": [
+              "doc02",
+              "doc04",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q19",
+            "retrieved": [
+              "doc05",
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc03"
+            ],
+            "evidence": [
+              "doc10",
+              "doc03"
+            ],
+            "hit": [
+              "doc03"
+            ],
+            "rank": 5,
+            "recall": 0.5
+          }
+        ]
+      },
+      "global": {
+        "recall": 0.47619047619047616,
+        "mrr": 0.3619047619047619,
+        "full": 3,
+        "total": 7,
+        "per_q": [
+          {
+            "qid": "Q11",
+            "retrieved": [
+              "doc05",
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc03"
+            ],
+            "evidence": [
+              "doc10",
+              "doc02",
+              "doc03"
+            ],
+            "hit": [
+              "doc03"
+            ],
+            "rank": 5,
+            "recall": 0.3333333333333333
+          },
+          {
+            "qid": "Q12",
+            "retrieved": [
+              "doc09",
+              "doc06",
+              "doc01",
+              "doc12",
+              "doc14"
+            ],
+            "evidence": [
+              "doc09"
+            ],
+            "hit": [
+              "doc09"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q13",
+            "retrieved": [
+              "doc02",
+              "doc10",
+              "doc15",
+              "doc11",
+              "doc13"
+            ],
+            "evidence": [
+              "doc04"
+            ],
+            "hit": [],
+            "rank": 0,
+            "recall": 0.0
+          },
+          {
+            "qid": "Q14",
+            "retrieved": [
+              "doc06",
+              "doc07",
+              "doc08",
+              "doc05"
+            ],
+            "evidence": [
+              "doc08"
+            ],
+            "hit": [
+              "doc08"
+            ],
+            "rank": 3,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q15",
+            "retrieved": [
+              "doc06",
+              "doc04",
+              "doc11",
+              "doc07",
+              "doc08"
+            ],
+            "evidence": [
+              "doc06",
+              "doc11"
+            ],
+            "hit": [
+              "doc06",
+              "doc11"
+            ],
+            "rank": 1,
+            "recall": 1.0
+          },
+          {
+            "qid": "Q18",
+            "retrieved": [
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc02",
+              "doc10"
+            ],
+            "evidence": [
+              "doc11"
+            ],
+            "hit": [],
+            "rank": 0,
+            "recall": 0.0
+          },
+          {
+            "qid": "Q20",
+            "retrieved": [
+              "doc01",
+              "doc12",
+              "doc14",
+              "doc09",
+              "doc02"
+            ],
+            "evidence": [
+              "doc15"
+            ],
+            "hit": [],
+            "rank": 0,
+            "recall": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "k_scan": {
+    "1": {
+      "Vector RAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.36666666666666664,
+          "mrr": 0.8,
+          "full": 0,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc07"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.5666666666666667,
+          "mrr": 0.8,
+          "full": 2,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc10"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [
+                "doc10"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc15"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc04"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc08"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        }
+      },
+      "GraphRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.3333333333333333,
+          "mrr": 0.8,
+          "full": 0,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc06"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc11"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc08"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.2,
+          "mrr": 0.2,
+          "full": 1,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc11"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "WikiRAG": {
+        "fact": {
+          "recall": 0.6,
+          "mrr": 0.6,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc11"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.4333333333333333,
+          "mrr": 1.0,
+          "full": 0,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc06"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc04"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.3,
+          "mrr": 0.4,
+          "full": 1,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc05"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc02"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc06"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        }
+      }
+    },
+    "2": {
+      "Vector RAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01",
+                "doc15"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09",
+                "doc01"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13",
+                "doc12"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc07"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12",
+                "doc06"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.8,
+          "mrr": 0.9,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04",
+                "doc06"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04",
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc07",
+                "doc06"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 2,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10",
+                "doc02"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04",
+                "doc07"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11",
+                "doc04"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.7666666666666666,
+          "mrr": 0.9,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc10",
+                "doc05"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [
+                "doc10"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc15",
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc04",
+                "doc07"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc08",
+                "doc06"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06",
+                "doc04"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        }
+      },
+      "GraphRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12",
+                "doc06"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.6,
+          "mrr": 0.9,
+          "full": 1,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc06",
+                "doc11"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc11",
+                "doc06"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10",
+                "doc02"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc08",
+                "doc07"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc07"
+              ],
+              "rank": 2,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11",
+                "doc02"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.2,
+          "mrr": 0.2,
+          "full": 1,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09",
+                "doc11"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc11",
+                "doc02"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            }
+          ]
+        }
+      },
+      "WikiRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 0.8,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01",
+                "doc12"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09",
+                "doc01"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc11",
+                "doc13"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc10"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc01",
+                "doc12"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.6333333333333333,
+          "mrr": 1.0,
+          "full": 2,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc06",
+                "doc07"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc02",
+                "doc10"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.3,
+          "mrr": 0.4,
+          "full": 1,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc05",
+                "doc01"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09",
+                "doc06"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc02",
+                "doc10"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc06",
+                "doc07"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06",
+                "doc04"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        }
+      }
+    },
+    "3": {
+      "Vector RAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01",
+                "doc15",
+                "doc06"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09",
+                "doc01",
+                "doc15"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13",
+                "doc12",
+                "doc05"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc07",
+                "doc10"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12",
+                "doc06",
+                "doc07"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.8666666666666666,
+          "mrr": 0.9,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04",
+                "doc06",
+                "doc05"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04",
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc07",
+                "doc06",
+                "doc04"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06",
+                "doc04"
+              ],
+              "rank": 2,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10",
+                "doc02",
+                "doc01"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04",
+                "doc07",
+                "doc06"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11",
+                "doc04",
+                "doc02"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.7666666666666666,
+          "mrr": 0.9,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc10",
+                "doc05",
+                "doc15"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [
+                "doc10"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc15",
+                "doc09",
+                "doc06"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc04",
+                "doc07",
+                "doc02"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc08",
+                "doc06",
+                "doc05"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06",
+                "doc04",
+                "doc08"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.5
+            }
+          ]
+        }
+      },
+      "GraphRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12",
+                "doc06",
+                "doc04"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.8666666666666666,
+          "mrr": 0.9,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc06",
+                "doc11",
+                "doc02"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc02",
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc11",
+                "doc06",
+                "doc02"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10",
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc08",
+                "doc07",
+                "doc04"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11",
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.5,
+          "mrr": 0.3333333333333333,
+          "full": 2,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09",
+                "doc11",
+                "doc13"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc11",
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 3,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc02",
+                "doc04",
+                "doc06"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc02",
+                "doc04",
+                "doc06"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 3,
+              "recall": 0.5
+            }
+          ]
+        }
+      },
+      "WikiRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 0.8,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01",
+                "doc12",
+                "doc14"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09",
+                "doc01",
+                "doc12"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc11",
+                "doc13",
+                "doc01"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc10",
+                "doc15"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc01",
+                "doc12",
+                "doc14"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.8,
+          "mrr": 1.0,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04",
+                "doc11",
+                "doc06"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04",
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc06",
+                "doc07",
+                "doc08"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc02",
+                "doc10",
+                "doc15"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04",
+                "doc11",
+                "doc07"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc04",
+                "doc11",
+                "doc13"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.6,
+          "mrr": 0.4666666666666666,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc05",
+                "doc01",
+                "doc12"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09",
+                "doc06",
+                "doc01"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc02",
+                "doc10",
+                "doc15"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc06",
+                "doc07",
+                "doc08"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 3,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06",
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "5": {
+      "Vector RAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01",
+                "doc15",
+                "doc06",
+                "doc07",
+                "doc04"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09",
+                "doc01",
+                "doc15",
+                "doc08",
+                "doc11"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13",
+                "doc12",
+                "doc05",
+                "doc06",
+                "doc11"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc07",
+                "doc10",
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12",
+                "doc06",
+                "doc07",
+                "doc08",
+                "doc11"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.9333333333333332,
+          "mrr": 0.9,
+          "full": 4,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04",
+                "doc06",
+                "doc05",
+                "doc11",
+                "doc07"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04",
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc07",
+                "doc06",
+                "doc04",
+                "doc11",
+                "doc15"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc04",
+                "doc06",
+                "doc11"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10",
+                "doc02",
+                "doc01",
+                "doc04",
+                "doc03"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04",
+                "doc07",
+                "doc06",
+                "doc05",
+                "doc08"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11",
+                "doc04",
+                "doc02",
+                "doc07",
+                "doc05"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.9333333333333332,
+          "mrr": 0.9,
+          "full": 4,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc10",
+                "doc05",
+                "doc15",
+                "doc01",
+                "doc03"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [
+                "doc10",
+                "doc03"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc15",
+                "doc09",
+                "doc06",
+                "doc11",
+                "doc08"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc04",
+                "doc07",
+                "doc02",
+                "doc10",
+                "doc11"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc08",
+                "doc06",
+                "doc05",
+                "doc15",
+                "doc07"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06",
+                "doc04",
+                "doc08",
+                "doc07",
+                "doc11"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        }
+      },
+      "GraphRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 1.0,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc13"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc04",
+                "doc11",
+                "doc10",
+                "doc06"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc12",
+                "doc06",
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 1.0,
+          "mrr": 0.9,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc06",
+                "doc11",
+                "doc02",
+                "doc04",
+                "doc10"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc11",
+                "doc06",
+                "doc02",
+                "doc04",
+                "doc10"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc04",
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc10",
+                "doc02",
+                "doc04",
+                "doc11",
+                "doc06"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc08",
+                "doc07",
+                "doc04",
+                "doc02",
+                "doc10"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc11",
+                "doc02",
+                "doc04",
+                "doc10"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.7,
+          "mrr": 0.3733333333333333,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc01"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09",
+                "doc11",
+                "doc13",
+                "doc02",
+                "doc04"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc11",
+                "doc02",
+                "doc04",
+                "doc10",
+                "doc06"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [
+                "doc04"
+              ],
+              "rank": 3,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc02",
+                "doc04",
+                "doc06",
+                "doc07",
+                "doc08"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 5,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc02",
+                "doc04",
+                "doc06",
+                "doc07",
+                "doc08"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06"
+              ],
+              "rank": 3,
+              "recall": 0.5
+            }
+          ]
+        }
+      },
+      "WikiRAG": {
+        "fact": {
+          "recall": 1.0,
+          "mrr": 0.8,
+          "full": 5,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q06",
+              "retrieved": [
+                "doc01",
+                "doc12",
+                "doc14",
+                "doc06",
+                "doc02"
+              ],
+              "evidence": [
+                "doc01"
+              ],
+              "hit": [
+                "doc01"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q07",
+              "retrieved": [
+                "doc09",
+                "doc01",
+                "doc12",
+                "doc14",
+                "doc02"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q08",
+              "retrieved": [
+                "doc11",
+                "doc13",
+                "doc01",
+                "doc12",
+                "doc14"
+              ],
+              "evidence": [
+                "doc13"
+              ],
+              "hit": [
+                "doc13"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q09",
+              "retrieved": [
+                "doc02",
+                "doc10",
+                "doc15",
+                "doc06",
+                "doc07"
+              ],
+              "evidence": [
+                "doc02"
+              ],
+              "hit": [
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q10",
+              "retrieved": [
+                "doc01",
+                "doc12",
+                "doc14",
+                "doc06",
+                "doc02"
+              ],
+              "evidence": [
+                "doc12"
+              ],
+              "hit": [
+                "doc12"
+              ],
+              "rank": 2,
+              "recall": 1.0
+            }
+          ]
+        },
+        "multi": {
+          "recall": 0.9333333333333332,
+          "mrr": 1.0,
+          "full": 4,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q01",
+              "retrieved": [
+                "doc04",
+                "doc11",
+                "doc06",
+                "doc07",
+                "doc08"
+              ],
+              "evidence": [
+                "doc04",
+                "doc06",
+                "doc02"
+              ],
+              "hit": [
+                "doc04",
+                "doc06"
+              ],
+              "rank": 1,
+              "recall": 0.6666666666666666
+            },
+            {
+              "qid": "Q02",
+              "retrieved": [
+                "doc06",
+                "doc07",
+                "doc08",
+                "doc04",
+                "doc11"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04",
+                "doc06"
+              ],
+              "hit": [
+                "doc04",
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q03",
+              "retrieved": [
+                "doc02",
+                "doc10",
+                "doc15",
+                "doc01",
+                "doc12"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02"
+              ],
+              "hit": [
+                "doc10",
+                "doc02"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q04",
+              "retrieved": [
+                "doc04",
+                "doc11",
+                "doc07",
+                "doc08",
+                "doc06"
+              ],
+              "evidence": [
+                "doc07",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc07"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q05",
+              "retrieved": [
+                "doc04",
+                "doc11",
+                "doc13",
+                "doc06"
+              ],
+              "evidence": [
+                "doc11",
+                "doc04"
+              ],
+              "hit": [
+                "doc04",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        },
+        "global": {
+          "recall": 0.6666666666666666,
+          "mrr": 0.5066666666666666,
+          "full": 3,
+          "total": 5,
+          "per_q": [
+            {
+              "qid": "Q11",
+              "retrieved": [
+                "doc05",
+                "doc01",
+                "doc12",
+                "doc14",
+                "doc03"
+              ],
+              "evidence": [
+                "doc10",
+                "doc02",
+                "doc03"
+              ],
+              "hit": [
+                "doc03"
+              ],
+              "rank": 5,
+              "recall": 0.3333333333333333
+            },
+            {
+              "qid": "Q12",
+              "retrieved": [
+                "doc09",
+                "doc06",
+                "doc01",
+                "doc12",
+                "doc14"
+              ],
+              "evidence": [
+                "doc09"
+              ],
+              "hit": [
+                "doc09"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q13",
+              "retrieved": [
+                "doc02",
+                "doc10",
+                "doc15",
+                "doc11",
+                "doc13"
+              ],
+              "evidence": [
+                "doc04"
+              ],
+              "hit": [],
+              "rank": 0,
+              "recall": 0.0
+            },
+            {
+              "qid": "Q14",
+              "retrieved": [
+                "doc06",
+                "doc07",
+                "doc08",
+                "doc05"
+              ],
+              "evidence": [
+                "doc08"
+              ],
+              "hit": [
+                "doc08"
+              ],
+              "rank": 3,
+              "recall": 1.0
+            },
+            {
+              "qid": "Q15",
+              "retrieved": [
+                "doc06",
+                "doc04",
+                "doc11",
+                "doc07",
+                "doc08"
+              ],
+              "evidence": [
+                "doc06",
+                "doc11"
+              ],
+              "hit": [
+                "doc06",
+                "doc11"
+              ],
+              "rank": 1,
+              "recall": 1.0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "failures": [
+    {
+      "system": "Vector RAG",
+      "qid": "Q01",
+      "qtype": "multi",
+      "question": "《大模型通识课》授课教师所在学院的行政负责人是谁？",
+      "retrieved": [
+        "doc04",
+        "doc06",
+        "doc05",
+        "doc11",
+        "doc07"
+      ],
+      "evidence": [
+        "doc04",
+        "doc06",
+        "doc02"
+      ],
+      "missed": [
+        "doc02"
+      ]
+    },
+    {
+      "system": "Vector RAG",
+      "qid": "Q11",
+      "qtype": "global",
+      "question": "云山大学有哪些科研平台？分别依托谁建设？",
+      "retrieved": [
+        "doc10",
+        "doc05",
+        "doc15",
+        "doc01",
+        "doc03"
+      ],
+      "evidence": [
+        "doc10",
+        "doc02",
+        "doc03"
+      ],
+      "missed": [
+        "doc02"
+      ]
+    },
+    {
+      "system": "GraphRAG",
+      "qid": "Q11",
+      "qtype": "global",
+      "question": "云山大学有哪些科研平台？分别依托谁建设？",
+      "retrieved": [
+        "doc01"
+      ],
+      "evidence": [
+        "doc10",
+        "doc02",
+        "doc03"
+      ],
+      "missed": [
+        "doc10",
+        "doc02",
+        "doc03"
+      ]
+    },
+    {
+      "system": "GraphRAG",
+      "qid": "Q15",
+      "qtype": "global",
+      "question": "对想深入学习大模型的学生，学校提供哪些课程和课外活动？",
+      "retrieved": [
+        "doc02",
+        "doc04",
+        "doc06",
+        "doc07",
+        "doc08"
+      ],
+      "evidence": [
+        "doc06",
+        "doc11"
+      ],
+      "missed": [
+        "doc11"
+      ]
+    },
+    {
+      "system": "WikiRAG",
+      "qid": "Q01",
+      "qtype": "multi",
+      "question": "《大模型通识课》授课教师所在学院的行政负责人是谁？",
+      "retrieved": [
+        "doc04",
+        "doc11",
+        "doc06",
+        "doc07",
+        "doc08"
+      ],
+      "evidence": [
+        "doc04",
+        "doc06",
+        "doc02"
+      ],
+      "missed": [
+        "doc02"
+      ]
+    },
+    {
+      "system": "WikiRAG",
+      "qid": "Q11",
+      "qtype": "global",
+      "question": "云山大学有哪些科研平台？分别依托谁建设？",
+      "retrieved": [
+        "doc05",
+        "doc01",
+        "doc12",
+        "doc14",
+        "doc03"
+      ],
+      "evidence": [
+        "doc10",
+        "doc02",
+        "doc03"
+      ],
+      "missed": [
+        "doc10",
+        "doc02"
+      ]
+    },
+    {
+      "system": "WikiRAG",
+      "qid": "Q13",
+      "qtype": "global",
+      "question": "人工智能学院有哪些教师？各自做什么研究方向？",
+      "retrieved": [
+        "doc02",
+        "doc10",
+        "doc15",
+        "doc11",
+        "doc13"
+      ],
+      "evidence": [
+        "doc04"
+      ],
+      "missed": [
+        "doc04"
+      ]
+    }
+  ],
+  "graph": {
+    "n_nodes": 45,
+    "n_edges": 40,
+    "n_communities": 10
+  }
+}
