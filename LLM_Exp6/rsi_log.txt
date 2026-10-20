@@ -1,0 +1,26 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[transformers] You are using a model of type `idefics3` to instantiate a model of type `smolvlm`. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  41%|████      | 194/471 [00:00<00:00, 1904.47it/s]Loading weights:  82%|████████▏ | 385/471 [00:00<00:00, 1889.73it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1909.64it/s]
+trainable params: 1,363,968 || all params: 257,848,896 || trainable%: 0.5290
+[sft] 种子数据 15 条（定位答案由 GT 框换算）→ sft_data.json
+[rsi] 初始数据池 15 条，开始 2 轮递归自进化
+
+===== RSI 第 1 轮 =====
+[rsi] 轮 1：VLM 答对 4/15，自查改写 0 次，验证器纠错 7 次，新增可用样本 0 条
+[rsi] 轮 1：定位平均 IoU = 0.000
+[sft] step5/10 loss=19.7462
+[sft] step10/10 loss=16.4206
+/home/luosury/LLM_Project/LLM_Venv/lib/python3.10/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in HuggingFaceTB/SmolVLM-256M-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+[sft] 适配器已保存到 ./sft_adapter（本轮训练样本 15 条）
+[rsi] 轮 1 轮末评测 总计 4/15，loc 0/8，IoU=0.000，数据池 15 条，耗时 56.7s
+
+===== RSI 第 2 轮 =====
+[rsi] 轮 2：VLM 答对 4/15，自查改写 0 次，验证器纠错 7 次，新增可用样本 0 条
+[rsi] 轮 2：定位平均 IoU = 0.000
+[sft] step5/10 loss=14.1702
+[sft] step10/10 loss=11.5388
+[sft] 适配器已保存到 ./sft_adapter（本轮训练样本 15 条）
+[rsi] 轮 2 轮末评测 总计 4/15，loc 0/8，IoU=0.000，数据池 15 条，耗时 51.4s
+[rsi] 记忆写入 rsi_memory.json（30 条）；数据池最终 15 条
+[rsi] 总耗时 112.5s → experiment_results.json

@@ -1,0 +1,20 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[transformers] You are using a model of type `idefics3` to instantiate a model of type `smolvlm`. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  40%|████      | 190/471 [00:00<00:00, 1882.38it/s]Loading weights:  81%|████████  | 381/471 [00:00<00:00, 1897.46it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1923.06it/s]
+trainable params: 1,363,968 || all params: 257,848,896 || trainable%: 0.5290
+[sft] step5/60 loss=19.7965
+[sft] step10/60 loss=16.6060
+[sft] step15/60 loss=15.0880
+[sft] step20/60 loss=12.1822
+[sft] step25/60 loss=8.4834
+[sft] step30/60 loss=7.7411
+[sft] step35/60 loss=4.3647
+[sft] step40/60 loss=1.8399
+[sft] step45/60 loss=1.7430
+[sft] step50/60 loss=0.7260
+[sft] step55/60 loss=0.3630
+[sft] step60/60 loss=0.2864
+/home/luosury/LLM_Project/LLM_Venv/lib/python3.10/site-packages/peft/utils/save_and_load.py:313: UserWarning: Could not find a config file in HuggingFaceTB/SmolVLM-256M-Instruct - will assume that the vocabulary was not modified.
+  warnings.warn(
+[sft] 适配器已保存到 ./sft_adapter（本轮训练样本 15 条）
+[sft] 耗时 73.2s

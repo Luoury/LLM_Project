@@ -1,0 +1,60 @@
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[transformers] You are using a model of type `idefics3` to instantiate a model of type `smolvlm`. This may be expected if you are loading a checkpoint that shares a subset of the architecture (e.g., loading a `sam2_video` checkpoint into `Sam2Model`), but is otherwise not supported and can yield errors. Please verify that the checkpoint is compatible with the model you are instantiating.
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 177/471 [00:00<00:00, 1734.88it/s]Loading weights:  76%|███████▋  | 360/471 [00:00<00:00, 1785.72it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 1816.30it/s]
+
+===== 基线 × 15 题 =====
+[L01] × A: 1. 1. 1. 1. 1. 1. 1. 1. gold: 第1行第2列 IoU=0.00
+[L02] × A: 1. 在第几行第几列？
+Answer: 1. gold: 第1行第1列 IoU=0.00
+[L03] × A: 蓝色圆形位于第几行第几列 gold: 第4行第2列 IoU=0.00
+[L04] × A: 蓝色方形位于第几行第几列� gold: 第2行第2列 IoU=0.00
+[L05] × A: 1. 在第几行第几列？
+Answer: 1. gold: 第1行第2列 IoU=0.00
+[L06] × A: 1. gold: 第4行第1列 IoU=0.00
+[L07] × A: 1. 在第几行第几列？
+Answer: 1. gold: 第2行第4列 IoU=0.00
+[L08] × A: 1 gold: 第4行第4列 IoU=0.00
+基线            loc    正确 0/8
+基线            count  正确 4/4
+基线            exist  正确 0/3
+基线            总计 正确 4/15  定位平均 IoU=0.000
+
+
+===== SFT × 15 题 =====
+[L01] × A: 1. 在图中，第二行的第一列是第几 gold: 第1行第2列 IoU=0.00
+[L02] × A: 1. 在图中，第二行的第一列是第几 gold: 第1行第1列 IoU=0.00
+[L03] × A: 1. 在图中，第二行的第一列是第几 gold: 第4行第2列 IoU=0.00
+[L04] × A: 1. 在图中，第二行的第一列是1，第 gold: 第2行第2列 IoU=0.00
+[L05] × A: 1. 1. 2. 3. 4. 5. 6. 7. gold: 第1行第2列 IoU=0.00
+[L06] × A: 1. 1. 2. 3. 4. 5. 6. 7. gold: 第4行第1列 IoU=0.00
+[L07] × A: 1. 在第几行第几列？
+2. 1. gold: 第2行第4列 IoU=0.00
+[L08] × A: 1. 在第几行第几列？
+2. 1. gold: 第4行第4列 IoU=0.00
+SFT           loc    正确 0/8
+SFT           count  正确 4/4
+SFT           exist  正确 2/3
+SFT           总计 正确 6/15  定位平均 IoU=0.000
+
+
+===== SFT + 验证器纠错 × 15 题 =====
+[L01·loc] × A1: 1. 在图中，第二行的第一列是第几 → A2: 1.0000000000000001 1.00 gold: 第1行第2列
+[L02·loc] × A1: 1. 在图中，第二行的第一列是第几 → A2: 1. 1. 1. 1. 1. 1. 1. 1. gold: 第1行第1列
+[L03·loc] × A1: 1. 在图中，第二行的第一列是第几 → A2: 1.0000000000000001 1.00 gold: 第4行第2列
+[L04·loc] × A1: 1. 在图中，第二行的第一列是1，第 → A2: 1.0000000000000001 1.00 gold: 第2行第2列
+[L05·loc] × A1: 1. 1. 2. 3. 4. 5. 6. 7. → A2: 1.0000000000000001. gold: 第1行第2列
+[L06·loc] × A1: 1. 1. 2. 3. 4. 5. 6. 7. → A2: 1.0 1.0 1.0 1.0 1.0 1.0 gold: 第4行第1列
+[L07·loc] × A1: 1. 在第几行第几列？
+2. 1. → A2: 1.0000000000000001 1.00 gold: 第2行第4列
+[L08·loc] × A1: 1. 在第几行第几列？
+2. 1. → A2: 1. 1. 1. 1. 1. 1. 1. 1. gold: 第4行第4列
+[C01·count] √ A1: 1. 1. 2. 3. 4. 5. 6. 7. → A2: 1. 1. 2. 3. 4. 5. 6. 7. gold: 1个
+[C02·count] √ A1: 1. 1. 2. 3. 4. 5. 6. 7. → A2: 1. 1. 2. 3. 4. 5. 6. 7. gold: 1个
+[C03·count] √ A1: 1. 2. 3. 4. 5. 6. 7. 8. → A2: 1. 2. 3. 4. 5. 6. 7. 8. gold: 1个
+[C04·count] √ A1: 1. 2. 3. 4. 5. 6. 7. 8. → A2: 1. 2. 3. 4. 5. 6. 7. 8. gold: 1个
+[E01·exist] √ A1: Yes, there is no color in the  → A2: Yes, there is no color in the  gold: 有
+[E02·exist] √ A1: Yes, there is no color in the  → A2: Yes, there is no color in the  gold: 有
+[E03·exist] × A1: 没有蓝色圆形？ → A2: 592. gold: 有
+SFT           纯 VLM 正确 6/15 纠错后正确 6/15
+
+[eval] 三阶段完成，耗时 82.41s → experiment_results.json
