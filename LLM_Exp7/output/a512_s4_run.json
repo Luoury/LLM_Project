@@ -1,0 +1,29 @@
+{
+  "name": "a512_s4",
+  "params": {
+    "name": "a512_s4",
+    "res": 512,
+    "steps": 4,
+    "cfg": 1.2,
+    "control_strength": 0.9,
+    "seed": 42,
+    "threads": -1,
+    "sampler": "euler_a",
+    "prompt": "photorealistic render, studio soft lighting, PBR material, preserve original 3d geometry, sharp",
+    "negative_prompt": "deformed geometry, perspective changed",
+    "init_img": null,
+    "strength": 0.35,
+    "control_image": null,
+    "blend": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\assets\\demo_white_model.blend",
+    "model": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\sd_turbo-q4_0.gguf",
+    "controlnet": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\control_depth_sd21-fp16.gguf",
+    "outdir": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output",
+    "skip_blender": false
+  },
+  "blender_s": 6.66,
+  "sdcli_total_s": 60.58,
+  "vae_decode_s": 14.51,
+  "sampling_s": 37.31,
+  "generate_image_s": 59.45,
+  "output": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output\\a512_s4_photoreal.png"
+}

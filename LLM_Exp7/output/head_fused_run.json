@@ -1,0 +1,31 @@
+{
+  "name": "head_fused",
+  "params": {
+    "name": "head_fused",
+    "res": 512,
+    "steps": 8,
+    "cfg": 1.2,
+    "control_strength": 0.6,
+    "seed": 42,
+    "threads": -1,
+    "sampler": "euler_a",
+    "prompt": "portrait of a young person, natural skin texture, front view, soft studio lighting, plain grey background, photorealistic, sharp",
+    "negative_prompt": "deformed geometry, perspective changed",
+    "init_img": "output/head_fused_raw.png",
+    "strength": 0.3,
+    "control_image": "output/head_depth_0001.png",
+    "blend": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\assets\\demo_white_model.blend",
+    "model": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\sd_turbo-q4_0.gguf",
+    "controlnet": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\control_depth_sd21-fp16.gguf",
+    "outdir": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output",
+    "skip_blender": true
+  },
+  "depth_source": "reused",
+  "blender_s": 0.0,
+  "sdcli_total_s": 65.72,
+  "vae_decode_s": 15.12,
+  "vae_encode_s": 13.0,
+  "sampling_s": 29.78,
+  "generate_image_s": 60.93,
+  "output": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output\\head_fused_photoreal.png"
+}

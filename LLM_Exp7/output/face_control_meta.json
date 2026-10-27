@@ -1,0 +1,11 @@
+{
+  "scene": "headonly.blend",
+  "resolution": 512,
+  "clay_samples": 64,
+  "depth_near": 3.4098592283138918,
+  "depth_far": 4.513711118247486,
+  "percentiles": [
+    2.0,
+    98.0
+  ]
+}

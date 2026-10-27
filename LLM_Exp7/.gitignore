@@ -1,0 +1,7 @@
+# 大文件不入库
+models/
+vendor/
+*.blend1
+output/_report_preview.pdf
+__pycache__/
+*.pyc
