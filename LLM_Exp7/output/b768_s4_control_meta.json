@@ -1,0 +1,11 @@
+{
+  "scene": "demo_white_model.blend",
+  "resolution": 768,
+  "clay_samples": 64,
+  "depth_near": 7.520169415743424,
+  "depth_far": 11.255796606544775,
+  "percentiles": [
+    2.0,
+    98.0
+  ]
+}

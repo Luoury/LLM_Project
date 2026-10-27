@@ -1,0 +1,29 @@
+{
+  "name": "face",
+  "params": {
+    "name": "face",
+    "res": 512,
+    "steps": 4,
+    "cfg": 1.2,
+    "control_strength": 0.9,
+    "seed": 7,
+    "threads": -1,
+    "sampler": "euler_a",
+    "prompt": "studio portrait headshot of a young person facing the camera, neutral expression, soft key light, plain light grey background, photorealistic, sharp",
+    "negative_prompt": "deformed geometry, perspective changed",
+    "init_img": null,
+    "strength": 0.35,
+    "control_image": null,
+    "blend": "assets/headonly.blend",
+    "model": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\sd_turbo-q4_0.gguf",
+    "controlnet": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\control_depth_sd21-fp16.gguf",
+    "outdir": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output",
+    "skip_blender": false
+  },
+  "blender_s": 3.22,
+  "sdcli_total_s": 61.79,
+  "vae_decode_s": 15.25,
+  "sampling_s": 38.06,
+  "generate_image_s": 60.72,
+  "output": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output\\face_photoreal.png"
+}

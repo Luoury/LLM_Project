@@ -1,0 +1,11 @@
+{
+  "scene": "head_bust.blend",
+  "resolution": 512,
+  "clay_samples": 64,
+  "depth_near": 3.415903389388435,
+  "depth_far": 4.507667100023392,
+  "percentiles": [
+    2.0,
+    98.0
+  ]
+}

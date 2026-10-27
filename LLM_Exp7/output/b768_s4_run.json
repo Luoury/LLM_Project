@@ -1,0 +1,29 @@
+{
+  "name": "b768_s4",
+  "params": {
+    "name": "b768_s4",
+    "res": 768,
+    "steps": 4,
+    "cfg": 1.2,
+    "control_strength": 0.9,
+    "seed": 42,
+    "threads": -1,
+    "sampler": "euler_a",
+    "prompt": "photorealistic render, studio soft lighting, PBR material, preserve original 3d geometry, sharp",
+    "negative_prompt": "deformed geometry, perspective changed",
+    "init_img": null,
+    "strength": 0.35,
+    "control_image": null,
+    "blend": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\assets\\demo_white_model.blend",
+    "model": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\sd_turbo-q4_0.gguf",
+    "controlnet": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\models\\control_depth_sd21-fp16.gguf",
+    "outdir": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output",
+    "skip_blender": false
+  },
+  "blender_s": 9.89,
+  "sdcli_total_s": 144.25,
+  "vae_decode_s": 33.8,
+  "sampling_s": 93.03,
+  "generate_image_s": 142.9,
+  "output": "C:\\Users\\Administrator\\Documents\\大二大模型课程作业\\实验七\\hw7\\output\\b768_s4_photoreal.png"
+}
