@@ -1,0 +1,95 @@
+{
+  "block": 96,
+  "batch": 1,
+  "reps": 100,
+  "threads": 8,
+  "torch": "2.11.0+cu128",
+  "models": {
+    "teacher": {
+      "tag": "teacher",
+      "dtype": "fp32",
+      "loss": 0.9986,
+      "ppl": 2.71,
+      "agree": 1.0,
+      "nbytes": 3031575,
+      "mb": 2.891,
+      "lat1": {
+        "median": 1.656,
+        "p90": 1.788,
+        "mean": 1.665
+      },
+      "lat8": {
+        "median": 0.836,
+        "p90": 1.345,
+        "mean": 0.897
+      },
+      "gen_cps": 1409.9,
+      "params": 737280
+    },
+    "student_kd": {
+      "tag": "student_kd",
+      "dtype": "fp32",
+      "loss": 1.4612,
+      "ppl": 4.31,
+      "agree": 0.6837,
+      "nbytes": 672215,
+      "mb": 0.641,
+      "lat1": {
+        "median": 0.672,
+        "p90": 0.817,
+        "mean": 0.695
+      },
+      "lat8": {
+        "median": 0.506,
+        "p90": 0.791,
+        "mean": 0.561
+      },
+      "gen_cps": 1668.6,
+      "params": 147456
+    },
+    "prune20": {
+      "tag": "prune20",
+      "dtype": "fp32",
+      "loss": 1.3177,
+      "ppl": 3.73,
+      "agree": 0.7161,
+      "nbytes": 672215,
+      "mb": 0.641,
+      "lat1": {
+        "median": 0.663,
+        "p90": 0.71,
+        "mean": 0.669
+      },
+      "lat8": {
+        "median": 0.527,
+        "p90": 1.321,
+        "mean": 0.686
+      },
+      "gen_cps": 2030.6,
+      "params": 147456
+    },
+    "prune20_int8": {
+      "tag": "prune20_int8",
+      "dtype": "int8",
+      "loss": 1.3184,
+      "ppl": 3.74,
+      "agree": 0.7153,
+      "nbytes": 321963,
+      "mb": 0.307,
+      "lat1": {
+        "median": 0.759,
+        "p90": 0.858,
+        "mean": 0.777
+      },
+      "lat8": {
+        "median": 0.657,
+        "p90": 1.037,
+        "mean": 0.738
+      },
+      "gen_cps": 1134.7,
+      "params": 147456
+    }
+  },
+  "sparse_estimate_mb": 0.73,
+  "sparsity": 0.2
+}

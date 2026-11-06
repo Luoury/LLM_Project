@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Tiny GPT · Distill → Prune → int8</title>
+<style>
+  :root {
+    --ink:#1b2430; --muted:#6b7684; --line:#e3e8ef; --bg:#f6f8fb;
+    --blue:#1f4e79; --green:#2e7d32; --red:#c0392b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Times New Roman", "Songti SC", "SimSun", serif;
+  }
+  .wrap { max-width:1180px; margin:0 auto; padding:28px 24px 48px; }
+  header h1 { font-size:26px; margin:0 0 6px; letter-spacing:.2px; }
+  header p { margin:0; color:var(--muted); font-size:14px; }
+  .badge { display:inline-block; padding:2px 9px; border:1px solid var(--line);
+    border-radius:999px; background:#fff; font-size:12px; color:var(--muted); margin-right:6px; }
+  .panel { background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:18px 20px; margin-top:18px; box-shadow:0 1px 2px rgba(16,24,40,.04); }
+  .controls { display:grid; grid-template-columns:2fr 1.2fr 1.2fr 1fr; gap:16px; }
+  label { display:block; font-size:12px; color:var(--muted); margin-bottom:6px; letter-spacing:.3px; }
+  input[type=text], input[type=number], select {
+    width:100%; padding:9px 10px; border:1px solid var(--line); border-radius:7px;
+    font-size:16px; font-family:inherit; background:#fff; color:var(--ink);
+  }
+  input[type=range] { width:100%; accent-color:var(--blue); }
+  .row { display:flex; align-items:center; gap:10px; }
+  .val { font-variant-numeric:tabular-nums; font-size:13px; color:var(--blue); min-width:38px; text-align:right; }
+  button { margin-top:16px; padding:10px 22px; border:0; border-radius:8px;
+    background:var(--blue); color:#fff; font-size:15px; font-family:inherit; cursor:pointer; }
+  button:disabled { opacity:.55; cursor:default; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 16px 12px; }
+  .card h3 { margin:0 0 4px; font-size:15px; }
+  .card .meta { font-size:12px; color:var(--muted); margin-bottom:10px; }
+  .out { font-family:"Noto Serif CJK SC","Songti SC",serif; font-size:17px; line-height:1.75;
+    white-space:pre-wrap; word-break:break-all; min-height:132px; }
+  .card.teacher { border-top:3px solid var(--blue); }
+  .card.student { border-top:3px solid var(--green); }
+  .card.tiny    { border-top:3px solid var(--red); }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin-top:6px; }
+  th, td { border-bottom:1px solid var(--line); padding:8px 6px; text-align:right; }
+  th:first-child, td:first-child { text-align:left; }
+  th { color:var(--muted); font-weight:normal; font-size:12px; }
+  .foot { margin-top:14px; font-size:12px; color:var(--muted); line-height:1.7; }
+  code { background:#eef2f7; padding:1px 5px; border-radius:4px; font-size:12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Tiny GPT · 蒸馏 → 剪枝 → int8 量化</h1>
+    <p>字符级 GPT（词表 322，语料 5.5 万字符）从零训练 · 教师 0.74 M → 学生 0.15 M → 0.31 MB · 纯 CPU 推理</p>
+    <div style="margin-top:10px">
+      <span class="badge">PyTorch 2.11 · CPU</span>
+      <span class="badge">无预训练权重</span>
+      <span class="badge">同一提示词 / 同一种子</span>
+    </div>
+  </header>
+
+  <div class="panel">
+    <div class="controls">
+      <div>
+        <label>提示词 PROMPT</label>
+        <input id="prompt" type="text" value="月" maxlength="20">
+      </div>
+      <div>
+        <label>TEMPERATURE <span class="val" id="tv">0.90</span></label>
+        <input id="temp" type="range" min="0.5" max="1.2" step="0.05" value="0.9">
+      </div>
+      <div>
+        <label>TOP-K <span class="val" id="kv">20</span></label>
+        <input id="topk" type="range" min="5" max="60" step="5" value="20">
+      </div>
+      <div>
+        <label>生成长度 <span class="val" id="nv">60</span></label>
+        <input id="len" type="range" min="20" max="120" step="10" value="60">
+      </div>
+    </div>
+    <button id="go">生成</button>
+  </div>
+
+  <div class="cards">
+    <div class="card teacher">
+      <h3>教师 Teacher</h3>
+      <div class="meta" id="m-teacher">0.74 M 参数 · 2.89 MB</div>
+      <div class="out" id="o-teacher">—</div>
+    </div>
+    <div class="card student">
+      <h3>蒸馏学生 Student (KD)</h3>
+      <div class="meta" id="m-student">0.15 M 参数 · 0.64 MB</div>
+      <div class="out" id="o-student">—</div>
+    </div>
+    <div class="card tiny">
+      <h3>剪枝 20% + int8</h3>
+      <div class="meta" id="m-tiny">0.15 M 参数（20% 置零） · 0.31 MB</div>
+      <div class="out" id="o-tiny">—</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div style="font-size:14px;margin-bottom:4px">离线评测（留出集 5 357 字符）与在线延迟</div>
+    <table id="tbl">
+      <thead>
+        <tr><th>模型</th><th>留出集 loss</th><th>PPL</th><th>与教师一致率</th><th>体积</th><th>单线程前向 (ms)</th><th>本次生成 (ms)</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="foot" id="foot"></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let bench = {};
+
+function syncLabels() {
+  $('tv').textContent = Number($('temp').value).toFixed(2);
+  $('kv').textContent = $('topk').value;
+  $('nv').textContent = $('len').value;
+}
+['temp','topk','len'].forEach(id => $(id).addEventListener('input', syncLabels));
+syncLabels();
+
+async function meta() {
+  try {
+    const r = await fetch('/api/meta');
+    const d = await r.json();
+    bench = d.models || {};
+  } catch (e) { /* 离线也能点生成 */ }
+}
+
+async function run() {
+  const btn = $('go');
+  btn.disabled = true; btn.textContent = '生成中…';
+  try {
+    const r = await fetch('/api/generate', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        prompt: $('prompt').value,
+        temperature: Number($('temp').value),
+        top_k: Number($('topk').value),
+        n: Number($('len').value),
+        seed: 0
+      })
+    });
+    const d = await r.json();
+    if (d.error) throw new Error(d.error);
+    const names = {teacher:'m-teacher', student:'m-student', tiny:'m-tiny'};
+    const keys  = {teacher:'teacher', student:'student_kd', tiny:'prune20_int8'};
+    ['teacher','student','tiny'].forEach(k => {
+      $('o-' + k).textContent = d[k].text;
+      const b = bench[keys[k]];
+      $(names[k]).textContent = b
+        ? `${(b.params/1e6).toFixed(2)} M 参数 · ${b.mb} MB · 前向 ${d[k].latency} ms`
+        : `前向 ${d[k].latency} ms`;
+    });
+    render(d);
+  } catch (e) {
+    alert('生成失败：' + e.message);
+  } finally {
+    btn.disabled = false; btn.textContent = '生成';
+  }
+}
+
+function render(d) {
+  const order = [['teacher','教师 (fp32)'], ['student','KD 学生 (fp32)'],
+                 ['tiny','剪枝 20% + int8']];
+  const keys = {teacher:'teacher', student:'student_kd', tiny:'prune20_int8'};
+  const tb = $('tbl').querySelector('tbody');
+  tb.innerHTML = order.map(([k, label]) => {
+    const b = bench[keys[k]] || {};
+    return `<tr>
+      <td>${label}</td>
+      <td>${b.loss ?? '—'}</td>
+      <td>${b.ppl ?? '—'}</td>
+      <td>${b.agree != null ? (b.agree*100).toFixed(1) + '%' : '—'}</td>
+      <td>${b.mb != null ? b.mb + ' MB' : '—'}</td>
+      <td>${b.lat1 ? b.lat1.median : '—'}</td>
+      <td>${d[k].ms}</td>
+    </tr>`;
+  }).join('');
+  const t = bench.teacher, s = bench.student_kd, q = bench.prune20_int8;
+  if (t && q) {
+    $('foot').textContent =
+      `压缩阶梯：教师 ${t.mb} MB / loss ${t.loss} → KD 学生 ${s.mb} MB / ${s.loss} → ` +
+      `剪枝 20% + int8 ${q.mb} MB / ${q.loss}（相对教师 ${(t.nbytes/q.nbytes).toFixed(2)}×，` +
+      `loss 仅 +${(q.loss - t.loss).toFixed(4)}）。int8 在 batch=1 的 CPU 上并没有更快：` +
+      `动态量化省的是体积，不是算力。`;
+  }
+}
+
+$('go').addEventListener('click', run);
+meta().then(run);
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+{
+  "baselines": [
+    {
+      "tag": "teacher",
+      "params": 737280,
+      "loss": 0.9986,
+      "ppl": 2.71,
+      "agree": 1.0,
+      "latency_ms": 1.475,
+      "nbytes": 3033744,
+      "size_mb": 2.89,
+      "ratio_vs_teacher": 1.0
+    },
+    {
+      "tag": "student_kd",
+      "params": 147456,
+      "loss": 1.4612,
+      "ppl": 4.31,
+      "agree": 0.6837,
+      "latency_ms": 0.648,
+      "nbytes": 674384,
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    }
+  ],
+  "pruned": [
+    {
+      "tag": "ctrl_more_steps",
+      "params": 147456,
+      "loss": 1.3081,
+      "ppl": 3.7,
+      "agree": 0.7184,
+      "latency_ms": 0.641,
+      "nbytes": 674384,
+      "ratio": 0.0,
+      "sparsity": 0.0,
+      "ft_iters": 120,
+      "ft_s": 2.8,
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    },
+    {
+      "tag": "prune_20",
+      "params": 147456,
+      "loss": 1.3177,
+      "ppl": 3.73,
+      "agree": 0.7161,
+      "latency_ms": 0.747,
+      "nbytes": 674384,
+      "ratio": 0.2,
+      "sparsity": 0.2,
+      "kept": 95129,
+      "total": 118912,
+      "loss_before_prune_ft": 1.4587,
+      "ft_iters": 120,
+      "ft_s": 1.6,
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    },
+    {
+      "tag": "prune_40",
+      "params": 147456,
+      "loss": 1.3309,
+      "ppl": 3.78,
+      "agree": 0.7102,
+      "latency_ms": 0.709,
+      "nbytes": 674384,
+      "ratio": 0.4,
+      "sparsity": 0.4,
+      "kept": 71347,
+      "total": 118912,
+      "loss_before_prune_ft": 1.4957,
+      "ft_iters": 120,
+      "ft_s": 1.7,
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    },
+    {
+      "tag": "prune_60",
+      "params": 147456,
+      "loss": 1.3581,
+      "ppl": 3.89,
+      "agree": 0.7004,
+      "latency_ms": 0.718,
+      "nbytes": 674384,
+      "ratio": 0.6,
+      "sparsity": 0.6,
+      "kept": 47565,
+      "total": 118912,
+      "loss_before_prune_ft": 1.6189,
+      "ft_iters": 120,
+      "ft_s": 1.7,
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    },
+    {
+      "tag": "prune_75",
+      "params": 147456,
+      "loss": 1.4431,
+      "ppl": 4.23,
+      "agree": 0.6793,
+      "latency_ms": 0.707,
+      "nbytes": 674384,
+      "ratio": 0.75,
+      "sparsity": 0.75,
+      "kept": 29728,
+      "total": 118912,
+      "loss_before_prune_ft": 1.786,
+      "ft_iters": 120,
+      "ft_s": 1.7,
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    }
+  ],
+  "pipeline": [
+    {
+      "tag": "prune_20_int8",
+      "ratio": 0.2,
+      "params": 147456,
+      "nonzero": 95129,
+      "loss": 1.3184,
+      "ppl": 3.74,
+      "agree": 0.7152,
+      "latency_ms": 0.836,
+      "nbytes": 324222,
+      "size_mb": 0.31,
+      "ratio_vs_teacher": 9.36
+    }
+  ],
+  "width": [
+    {
+      "tag": "kd_w32",
+      "width": 32,
+      "params": 49152,
+      "loss": 1.7812,
+      "loss_std": 0.0022,
+      "ppl": 5.9367,
+      "agree": 0.5759,
+      "latency_ms": 0.503,
+      "nbytes": 281168,
+      "train_s": 2.8,
+      "seeds": [
+        1.7811,
+        1.7839,
+        1.7785
+      ],
+      "size_mb": 0.27,
+      "ratio_vs_teacher": 10.79
+    },
+    {
+      "tag": "kd_w48",
+      "width": 48,
+      "params": 92160,
+      "loss": 1.5972,
+      "loss_std": 0.0143,
+      "ppl": 4.94,
+      "agree": 0.6196,
+      "latency_ms": 0.616,
+      "nbytes": 453200,
+      "train_s": 4.0,
+      "seeds": [
+        1.578,
+        1.6013,
+        1.6123
+      ],
+      "size_mb": 0.43,
+      "ratio_vs_teacher": 6.69
+    },
+    {
+      "tag": "kd_w64",
+      "width": 64,
+      "params": 147456,
+      "loss": 1.4715,
+      "loss_std": 0.0315,
+      "ppl": 4.36,
+      "agree": 0.6782,
+      "latency_ms": 0.764,
+      "nbytes": 674384,
+      "train_s": 3.3,
+      "seeds": [
+        1.4273,
+        1.4988,
+        1.4883
+      ],
+      "size_mb": 0.64,
+      "ratio_vs_teacher": 4.5
+    },
+    {
+      "tag": "kd_w80",
+      "width": 80,
+      "params": 215040,
+      "loss": 1.3646,
+      "loss_std": 0.0206,
+      "ppl": 3.9167,
+      "agree": 0.702,
+      "latency_ms": 0.871,
+      "nbytes": 944720,
+      "train_s": 3.7,
+      "seeds": [
+        1.3368,
+        1.3712,
+        1.3859
+      ],
+      "size_mb": 0.9,
+      "ratio_vs_teacher": 3.21
+    }
+  ]
+}
