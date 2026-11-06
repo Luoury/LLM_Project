@@ -122,7 +122,7 @@ def main():
     # ---------------- header ----------------
     hdr = T[0]
     pairs = [("人工智能——深度学习大模型智能体", "2026 年 10 月 27 日"),
-             ("<NAME>", "<ID>"),
+             (os.environ.get("REPORT_NAME", ""), os.environ.get("REPORT_ID", "")),
              ("—", "个人计算机（Windows 11，纯 CPU）")]
     for r, (left, right) in enumerate(pairs):
         cell_text(hdr.rows[r].cells[1], left, align=WD_ALIGN_PARAGRAPH.CENTER)
@@ -375,7 +375,8 @@ def main():
         if txt.startswith("（请用") or txt.startswith("（简述") or txt.startswith("（总结"):
             p._element.getparent().remove(p._element)
 
-    out = os.path.join(os.path.dirname(HW7), "<ID>_<NAME>_实验作业七.docx")
+    out = os.path.join(os.path.dirname(HW7),
+                       os.environ.get("REPORT_OUT", "实验作业七.docx"))
     doc.save(out)
     print("saved", out)
 

@@ -6,6 +6,7 @@
 """
 import copy
 import json
+import os
 
 from docx import Document
 from docx.oxml import OxmlElement
@@ -14,8 +15,10 @@ from docx.shared import Inches, Pt
 from docx.text.paragraph import Paragraph
 
 TEMPLATE = "template_exp6.docx"
-OUTPUT = "<ID>_<NAME>_实验作业六.docx"
-STUDENT_NO, STUDENT_NAME, CLASS_NO = "<ID>", "<NAME>", "12班"
+OUTPUT = os.environ.get("REPORT_OUT", "实验作业六.docx")
+STUDENT_NO = os.environ.get("REPORT_ID", "")
+STUDENT_NAME = os.environ.get("REPORT_NAME", "")
+CLASS_NO = os.environ.get("REPORT_CLASS", "")
 
 RES = json.load(open("experiment_results.json", encoding="utf-8"))
 VCK = json.load(open("verifier_selfcheck.json", encoding="utf-8"))

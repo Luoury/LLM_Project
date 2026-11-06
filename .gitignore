@@ -9,3 +9,10 @@ __pycache__/
 LLM_Venv/
 .venv/
 venv/
+
+# 报告/课堂材料含个人信息，只保留在本机
+*.docx
+LLM_Exp8/docs/*.pdf
+
+# 训练权重
+*.pt
